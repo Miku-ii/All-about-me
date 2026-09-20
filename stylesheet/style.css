@@ -456,40 +456,6 @@ li strong {
 }
 
 
-@media (max-width: 500px) {
-
-    body {
-        padding: 20px 12px;
-    }
-
-    .bento-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .card-hero,
-    .card-quote,
-    .card-travel {
-        grid-column: span 1;
-    }
-
-    .polaroid-container {
-        gap: 8px;
-    }
-
-    .polaroid {
-        width: 32%;
-    }
-
-    .polaroid img {
-        height: 60px;
-    }
-
-    .hero-name {
-        font-size: 1.7rem;
-    }
-}
-
-
 
 /* ================= 9. 晚宴嘉宾区域 & 3D 翻转卡片 ================= */
 .card-guests-section {
@@ -608,5 +574,93 @@ li strong {
 }
     .flip-card {
     height: 160px;
+}
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .container {
+        width: 94%;
+        padding: 25px 0;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        grid-column: span 1 !important;
+        padding: 20px;
+    }
+
+    .card-hero {
+        min-height: auto;
+    }
+
+    .hero-image {
+        height: 200px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .card-quote {
+        min-height: auto;
+    }
+
+    .people-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .people-grid .person:last-child {
+        grid-column: span 1;
+    }
+
+    .travel-container {
+        flex-direction: column;
+    }
+
+    .polaroid {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .polaroid img {
+        height: 140px;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================================ 响应式 ================================ */ 
+@media (max-width: 900px) { 
+.bento-grid { grid-template-columns: repeat(2, 1fr); 
+} 
+.card-hero, .card-quote, .card-travel, .card-guests-section { 
+grid-column: span 2; 
+} 
+.flip-card { 
+    height: 160px; 
+} 
+} 
+@media (max-width: 500px) { 
+    .card-hero, .card-quote, .card-travel, .card-guests-section { 
+    grid-column: span 1; 
+} 
+.flip-card { height: 180px; 
+} 
+.flip-card-front { 
+padding: 16px; 
+} 
+.click-hint { 
+    font-size: 0.7rem; padding: 5px 8px;
 }
 }
